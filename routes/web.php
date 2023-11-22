@@ -35,7 +35,7 @@ Route::post('/insertar.mensaje', [MensajeController::class, 'store'])
     ->middleware(MaxLengthMiddleware::class);
 
 Route::get('/mensajes/{mensaje}/editar', [MensajeController::class, 'edit'])->name('mensajes.editar');
-Route::put('/mensajes/{mensaje}', [MensajeController::class, 'update'])->name('mensajes.actualizar');
+Route::put('/mensajes', [MensajeController::class, 'update'])->name('mensajes.actualizar')->middleware(MaxLengthMiddleware::class);
 Route::delete('/mensajes/{mensaje}', [MensajeController::class, 'destroy'])->name('mensajes.eliminar');
 
 Route::middleware('auth')->group(function () {

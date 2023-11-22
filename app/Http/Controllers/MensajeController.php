@@ -55,18 +55,22 @@ class MensajeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Mensaje $mensaje)
+    public function update(Request $request)
     {
         $request->validate([
             'mensaje' => 'required|string', // Otras reglas de validación según sea necesario
         ]);
-
+    
+        $mensaje = Mensaje::where('id', $request->input('mensaje_id'))->first();
+    
         $mensaje->update([
             'mensaje' => $request->input('mensaje'),
         ]);
-
+    
         return redirect()->route('mensajes');
     }
+    
+    
 
     /**
      * Remove the specified resource from storage.

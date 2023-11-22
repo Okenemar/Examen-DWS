@@ -20,6 +20,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
                             @foreach($mensajes as $mensaje)
                             <tr>
                                 <td class="border p-2 text-center">{{ $mensaje->id }}</td>
@@ -29,6 +30,7 @@
                                        class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">
                                         Editar
                                     </a>
+                                    
                                     <form action="{{ route('mensajes.eliminar', ['mensaje' => $mensaje]) }}" method="post" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
