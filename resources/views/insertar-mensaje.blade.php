@@ -27,7 +27,13 @@
                             <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Mensaje:</label>
                             <input type="text" name="mensaje" id="mensaje" value="{{ old('mensaje') }}" required
                                    class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                        </div>
+                                   <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" required
+                                   class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                                   <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Edad:</label>
+                            <input type="number" name="edad" id="edad" value="{{ old('edad') }}" required
+                                   class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                                </div>
                         
                         <!-- Otros campos del formulario según sea necesario -->
 

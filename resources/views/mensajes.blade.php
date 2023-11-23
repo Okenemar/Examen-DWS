@@ -16,6 +16,8 @@
                             <tr>
                                 <th class="bg-gray-800 text-white p-2 text-center">ID</th>
                                 <th class="bg-gray-800 text-white p-2 text-center">Mensaje</th>
+                                <th class="bg-gray-800 text-white p-2 text-center">Nombre</th>
+                                <th class="bg-gray-800 text-white p-2 text-center">Edad</th>
                                 <th class="bg-gray-800 text-white p-2 text-center">Acciones</th>
                             </tr>
                         </thead>
@@ -25,6 +27,8 @@
                             <tr>
                                 <td class="border p-2 text-center">{{ $mensaje->id }}</td>
                                 <td class="border p-2 text-center">{{ $mensaje->mensaje }}</td>
+                                <td class="border p-2 text-center">{{ $mensaje->nombre }}</td>
+                                <td class="border p-2 text-center">{{ $mensaje->edad }}</td>
                                 <td class="border p-2 flex items-center space-x-2 justify-center">
                                     <a href="{{ route('mensajes.editar', ['mensaje' => $mensaje]) }}"
                                        class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">

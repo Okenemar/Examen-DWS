@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('mensajes', function (Blueprint $table) {
             $table->id();
             $table->string('mensaje');
+            $table->string('nombre');
+            $table->integer('edad');
         });
     }
 

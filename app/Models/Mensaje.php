@@ -10,5 +10,5 @@ class Mensaje extends Model
     use HasFactory;
     public $timestamps = false;
 
-    protected $fillable = ['id', 'mensaje'];
+    protected $fillable = ['id', 'mensaje', 'nombre', 'edad'];
 }

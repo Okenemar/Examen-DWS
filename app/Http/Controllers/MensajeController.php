@@ -30,6 +30,9 @@ class MensajeController extends Controller
     {
         Mensaje::create([
             'mensaje' => $request->input('mensaje'),
+            'nombre' => $request->input('nombre'),
+            'edad' => $request->input('edad')
+            
         ]);
 
         return redirect()->route('mensajes');
@@ -59,12 +62,16 @@ class MensajeController extends Controller
     {
         $request->validate([
             'mensaje' => 'required|string', // Otras reglas de validación según sea necesario
+            'nombre' => 'required|string',
+            'edad' => 'required|integer'
         ]);
     
         $mensaje = Mensaje::where('id', $request->input('mensaje_id'))->first();
     
         $mensaje->update([
             'mensaje' => $request->input('mensaje'),
+            'nombre' => $request->input('nombre'),
+            'edad' => $request->input('edad')
         ]);
     
         return redirect()->route('mensajes');
